@@ -5,15 +5,75 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SahilActivity">
+    tools:context=".SahilActivity"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stock Information"
+        android:textSize="30sp"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeading"
+        android:text="INSERT STOCKS"
+        android:textSize="20sp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/tvHeading2"
+        android:text="Select Company Name:"
+        app:layout_constraintTop_toBottomOf="@id/btnInsert"
+        android:textSize="26sp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgCompanies"
+        app:layout_constraintTop_toBottomOf="@id/tvHeading2">
+
+        <RadioButton
+            android:id="@+id/rbCompany1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rbCompany2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+        <RadioButton
+            android:id="@+id/rbCompany3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+    </RadioGroup>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDisplay"
+        app:layout_constraintTop_toBottomOf="@id/rgCompanies"
+        android:text="DISPLAY STOCK INFO"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDisplay"
+        app:layout_constraintTop_toBottomOf="@id/btnDisplay"
+        android:textSize="20sp"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
